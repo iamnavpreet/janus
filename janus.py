@@ -41,6 +41,7 @@ if __name__ == '__main__':
     res = sts.assume_role_with_web_identity(
         RoleArn=aws_role_arn,
         WebIdentityToken=token,
+        DurationSeconds=43200,
         RoleSessionName=project_and_instance_name)
 
     aws_temporary_credentials = {
